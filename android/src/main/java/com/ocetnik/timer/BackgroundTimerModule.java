@@ -33,11 +33,10 @@ public class BackgroundTimerModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 sendEvent(reactContext, "backgroundTimer");
-                handler.postDelayed(runnable, delay);
             }
         };
-
-        handler.post(runnable);
+        handler.postDelayed(runnable, delay);
+        // handler.post(runnable);
     }
 
     @ReactMethod
