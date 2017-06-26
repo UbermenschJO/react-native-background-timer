@@ -5,6 +5,15 @@ import {
 
 const RNBackgroundTimer = NativeModules.RNBackgroundTimer;
 
+export const BGTimer = {
+    start : function(delay) {
+        return RNBackgroundTimer.start(delay);
+    },
+    stop : function() {
+        return RNBackgroundTimer.stop();
+    }
+};
+
 class BackgroundTimer {
 
 	constructor() {
